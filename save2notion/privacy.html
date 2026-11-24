@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | Save2Notion</title>
+<meta name="description" content="Privacy Policy for the Save2Notion Chrome extension.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+    <a class="brand" href="../"><strong>Tech Gems Lab</strong> <span>Save2Notion</span></a>
+</header>
+
+<h1>Save2Notion Privacy Policy</h1>
+<p class="lede">Save2Notion is a Chrome extension that saves the web page you are viewing as a page in a Notion database you chose. This policy explains what the extension keeps, what it sends and to whom.</p>
+
+<div class="card">
+    <p><strong>In short.</strong> Your data goes from your browser to your own Notion workspace and nowhere else. The developer collects nothing.</p>
+</div>
+
+<h2>What the extension stores in your browser</h2>
+<p>All of the following stays in the extension's local storage in your browser (<code>chrome.storage.local</code>). It is not synced to your Google account and web pages cannot read it.</p>
+<ul>
+    <li>Your Notion connection token, which you paste in the extension options.</li>
+    <li>The name of the connected workspace and of the connection.</li>
+    <li>The list of databases shared with the connection and their properties, kept as a cache.</li>
+    <li>The forms you create: which database they use and how each property is filled.</li>
+    <li>Your settings: the default and the last used form.</li>
+    <li>A list of the pages you saved from this browser (the cleaned page URL, the Notion page link and the time), up to 500 entries, used to show "Already saved".</li>
+</ul>
+
+<h2>What the extension sends</h2>
+<p>The extension sends data only to the Notion API (<code>api.notion.com</code>), to the workspace you connected, and only to do what you asked for:</p>
+<ul>
+    <li>Your connection token, with every request, to prove who you are to Notion.</li>
+    <li>Requests to list the databases shared with the connection, to read their properties and to look for a page with the same URL.</li>
+    <li>When you press Save to Notion: the page's title, URL (without tracking parameters), description, author, publication date, site name, keywords, language, image and website icon addresses, and the content you chose (the readable article, your selection, or nothing), as converted to a Notion page. On a YouTube video this includes the video details and its transcript; on an X post page, the thread. Images are saved as links to the original, not uploaded.</li>
+</ul>
+<p>Once data is in Notion, Notion's own terms and privacy policy apply to it.</p>
+
+<h2>When the extension reads a page</h2>
+<p>The extension reads the page you are viewing only when you ask: you click the toolbar icon, press the keyboard shortcut or choose "Save page to Notion" in the context menu. It has no scripts running on pages in the background and does not record which pages you visit.</p>
+<p>When you save a YouTube video, the transcript is fetched by a script running inside the YouTube page you have open, with requests to YouTube made from that page, the way the page's own "Show transcript" button works. When you save an X thread, the script reads the posts shown on the page and scrolls it briefly to load them. Nothing from these pages goes anywhere except to your Notion workspace.</p>
+
+<h2>What the developer collects</h2>
+<p>Nothing. Save2Notion has no server of its own and no analytics, advertising or tracking. The developer does not receive your token, your pages, your forms or any information about your use. Your data is not sold, rented or shared with anyone, and it is not used for any purpose other than saving the pages you choose to your Notion workspace.</p>
+
+<h2>Deleting your data</h2>
+<ul>
+    <li>Disconnect, in the extension options, removes your token, the workspace information, the cached database list and properties and the list of saved pages from your browser. Your forms and settings are kept.</li>
+    <li>Removing the extension from Chrome deletes everything it stores in your browser.</li>
+    <li>Pages already saved are in your Notion workspace; delete them there. To end the extension's access to your workspace, delete or regenerate the token, or remove the connection, in your Notion connection settings.</li>
+</ul>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version replaces this page and the date below changes. A change that affects how your data is handled will also be reflected in the extension's Chrome Web Store listing.</p>
+
+<h2>Contact</h2>
+<p>For privacy questions, open an issue at <a href="https://github.com/tech-gems-lab/tech-gems-lab.github.io/issues">github.com/tech-gems-lab/tech-gems-lab.github.io/issues</a>.</p>
+
+<p>Save2Notion is an independent tool, not affiliated with or endorsed by Notion Labs.</p>
+
+<footer>
+    <span>Last updated 24 November 2026</span>
+    <nav><a href="../">All policies</a></nav>
+</footer>
+
+</div>
+</body>
+</html>

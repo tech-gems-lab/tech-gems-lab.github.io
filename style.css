@@ -1,0 +1,167 @@
+/* Shared styles for the Tech Gems Lab policy pages.
+   Single stylesheet: the pages are static text and share one layout. */
+
+:root {
+    color-scheme: light dark;
+    --bg: #fbfaf8;
+    --surface: #ffffff;
+    --text: #1c1b1a;
+    --muted: #6b6864;
+    --rule: #e6e2dc;
+    --accent: #2f6fb0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #16151a;
+        --surface: #1e1d23;
+        --text: #eceaf0;
+        --muted: #9b97a3;
+        --rule: #302e38;
+        --accent: #7fb0e6;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 20px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+    max-width: 660px;
+    margin: 0 auto;
+    padding-block: 64px 80px;
+}
+
+header {
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand strong {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.brand span {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 1.85rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+
+.lede {
+    margin: 0 0 44px;
+    color: var(--muted);
+    font-size: 1.02rem;
+}
+
+h2 {
+    margin: 40px 0 12px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+p, li {
+    color: var(--text);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: var(--accent);
+    text-underline-offset: 2px;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 28px 0;
+}
+
+.card p:first-child { margin-top: 0; }
+.card p:last-child  { margin-bottom: 0; }
+
+.index-list {
+    list-style: none;
+    padding: 0;
+    margin: 36px 0 0;
+}
+
+.index-list li {
+    margin: 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.index-list a {
+    display: block;
+    padding: 18px 2px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.index-list a:hover .title { color: var(--accent); }
+
+.index-list .title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.index-list .desc {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    justify-content: space-between;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
