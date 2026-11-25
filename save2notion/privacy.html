@@ -22,13 +22,18 @@
 </div>
 
 <h2>What the extension stores in your browser</h2>
-<p>All of the following stays in the extension's local storage in your browser (<code>chrome.storage.local</code>). It is not synced to your Google account and web pages cannot read it.</p>
+<p>Web pages cannot read anything the extension stores.</p>
+<p>With "Sync across computers" on (the default), the following is kept in Chrome's synced extension storage (<code>chrome.storage.sync</code>), so every computer where you are signed in to Chrome with the same account and extension sync turned on is set up too. Google stores and transfers it as part of Chrome sync, under your Google account; the developer never receives it. If Chrome sync is off, it stays in this browser.</p>
 <ul>
     <li>Your Notion connection token, which you paste in the extension options.</li>
     <li>The name of the connected workspace and of the connection.</li>
-    <li>The list of databases shared with the connection and their properties, kept as a cache.</li>
     <li>The forms you create: which database they use and how each property is filled.</li>
     <li>Your settings: the default and the last used form.</li>
+</ul>
+<p>Turn off "Sync across computers" in the extension options to keep all of the above in this browser only (<code>chrome.storage.local</code>).</p>
+<p>The following always stays in this browser only (<code>chrome.storage.local</code>):</p>
+<ul>
+    <li>The list of databases shared with the connection and their properties, kept as a cache.</li>
     <li>A list of the pages you saved from this browser (the cleaned page URL, the Notion page link and the time), up to 500 entries, used to show "Already saved".</li>
 </ul>
 
@@ -64,7 +69,7 @@
 <p>Save2Notion is an independent tool, not affiliated with or endorsed by Notion Labs.</p>
 
 <footer>
-    <span>Last updated 24 November 2026</span>
+    <span>Last updated 25 November 2026</span>
     <nav><a href="../">All policies</a></nav>
 </footer>
 
