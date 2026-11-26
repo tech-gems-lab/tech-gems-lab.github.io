@@ -29,11 +29,13 @@
     <li>The name of the connected workspace and of the connection.</li>
     <li>The forms you create: which database they use and how each property is filled.</li>
     <li>Your settings: the default and the last used form.</li>
+    <li>The ids of databases shared with the connection that Notion's search does not list, found by the extension or added by you with their link.</li>
 </ul>
 <p>Turn off "Sync across computers" in the extension options to keep all of the above in this browser only (<code>chrome.storage.local</code>).</p>
 <p>The following always stays in this browser only (<code>chrome.storage.local</code>):</p>
 <ul>
     <li>The list of databases shared with the connection and their properties, kept as a cache.</li>
+    <li>The progress of the search for databases Notion's search does not list (ids of the pages and databases still to look at).</li>
     <li>A list of the pages you saved from this browser (the cleaned page URL, the Notion page link and the time), up to 500 entries, used to show "Already saved".</li>
 </ul>
 
@@ -41,7 +43,7 @@
 <p>The extension sends data only to the Notion API (<code>api.notion.com</code>), to the workspace you connected, and only to do what you asked for:</p>
 <ul>
     <li>Your connection token, with every request, to prove who you are to Notion.</li>
-    <li>Requests to list the databases shared with the connection, to read their properties and to look for a page with the same URL.</li>
+    <li>Requests to list the databases shared with the connection, to read their properties and to look for a page with the same URL. Because Notion's search leaves some shared databases out, the extension also lists the pages shared with the connection and reads which blocks they contain, only to find the databases inside them; it keeps nothing from those pages but the ids of the databases it finds.</li>
     <li>When you press Save to Notion: the page's title, URL (without tracking parameters), description, author, publication date, site name, keywords, language, image and website icon addresses, and the content you chose (the readable article, your selection, or nothing), as converted to a Notion page. On a YouTube video this includes the video details and its transcript; on an X post page, the thread. Images are saved as links to the original, not uploaded.</li>
 </ul>
 <p>Once data is in Notion, Notion's own terms and privacy policy apply to it.</p>
